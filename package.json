@@ -1,0 +1,25 @@
+{
+  "name": "pipeable",
+  "version": "0.0.1",
+  "description": "This package help you to excute functions and pipe the result of that function has first parameter of the next function. Something like pipe operator on Erlang or Elixir",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/*",
+    "start": "babel pipeable.js --out-file index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://www.github.com/highercomve/pipeable"
+  },
+  "keywords": [
+    "pipe",
+    "functional"
+  ],
+  "author": "Sergio Marin",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^6.1.18",
+    "expect.js": "^0.3.1",
+    "mocha": "^2.3.4"
+  }
+}
