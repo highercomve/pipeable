@@ -1,6 +1,15 @@
+"use strict";
 
-function Pipeable(previus = null) {
-  var pipe = function Pipe(fn = null) {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+function Pipeable() {
+  var previus = arguments[0] === undefined ? null : arguments[0];
+
+  var pipe = function Pipe() {
+    var fn = arguments[0] === undefined ? null : arguments[0];
+
     if (arguments.length === 0) {
       return previus;
     }
@@ -16,4 +25,5 @@ function Pipeable(previus = null) {
   return pipe;
 }
 
-export default Pipeable;
+exports["default"] = Pipeable;
+module.exports = exports["default"];

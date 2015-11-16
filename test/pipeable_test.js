@@ -33,4 +33,20 @@ describe('Pipeable main tests', function() {
     expect(startPipe()).to.be.eql([2,4,6,8,10,12])
   })
 
+  it('Test a dificult pipeline', function() {
+    var result = _pipe(array)(function(value) {
+      return value.map(function(item) {
+        return item + item
+      })
+    })(function(value) {
+      return value.filter(function(item) {
+        return item > 10
+      })
+    })(function(value) {
+      return value.pop()
+    })()
+
+    expect(result).to.be.equal(12)
+  })
+
 });
