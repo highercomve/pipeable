@@ -14,7 +14,10 @@ export function Pipeable(previus) {
   }
 }
 
-export default function _chain(input) {
+export default function _pipe(input) {
+  if (arguments.length === 0) {
+    throw new Error("Pipe function need a first run argument")
+  }
   return new Chain(input);
 }
 
