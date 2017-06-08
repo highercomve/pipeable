@@ -45,6 +45,8 @@ arrayMaped() // return the value of the currying => [2,4,6]
 #### Can be used chaining functions
 
 ```js
+var _pipe = require('pipeable').Pipeable
+
 _pipe([1,2,3])(function(value) {
   return value.map(function(item) {
     return item + item
